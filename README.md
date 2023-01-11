@@ -1,6 +1,6 @@
 # Popular_Recon_tools_In_one_go
 All the popular recon tool in one script
-This script all the tools that are popular and in the methodology of the legend himself Jason Haddix and more (explore yourself)
+This script includes all the tools that are popular and are in the methodology of the legend himself Jason Haddix and more (explore yourself)
 # To run the script
 either
 ```
