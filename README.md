@@ -4,10 +4,12 @@ This script includes all the tools that are popular and are in the methodology o
 # To run the script
 either
 ```
+cd Popular_Recon_tools_In_one_go
 bash recon_tools.sh
 ```
 or
 ```
+cd Popular_Recon_tools_In_one_go
 chmod +x recon_tools.sh
 ./recon_tools.sh
 ```
