@@ -12,4 +12,4 @@ chmod +x recon_tools.sh
 ./recon_tools.sh
 ```
 
-# Note: For Debian most of the packages are for Kali-Linux if you got any when installing it for Ubuntu or Linux-Mint or any other debian distro then you should add Kali-Linux Repository list to your /etc/apt/sources.list file
+# Note: Most of the tools should work but some of the tools are form Kali-Linux repository. So, if you got any error when installing it for Ubuntu or Linux-Mint or any other debian distro then you should add Kali-Linux Repository list to your /etc/apt/sources.list file
