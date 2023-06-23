@@ -14,7 +14,6 @@ chmod +x recon_tools.sh
 ./recon_tools.sh
 ```
 # Tools Included
-```
 **Browser**
 chromium-browser
 **Subdomain Finder**
@@ -65,7 +64,6 @@ feroxbuster
 jadx
 apkleaks
 
-```
 # Also works on arch based distro
 
 # Note: Most of the tools should work but some of the tools are form Kali-Linux repository. So, if you got any error when installing it for Ubuntu or Linux-Mint or any other debian distro then you should add Kali-Linux Repository list to your /etc/apt/sources.list file
