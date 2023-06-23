@@ -26,15 +26,17 @@ install_apt() {
     sudo apt-get autoremove -y
 	sudo apt clean
     #Installing Golang
-    sudo apt install golang -y
+    sudo apt install golang masscan massdns dirsearch -y
     printf "${blue} Installing All Go tools"
     #subfinder
     go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
     printf "${red} Don't forget to add API keys to $HOME/.config/subfinder/provider-config.yaml"
+    sleep 5
     #amass 
     go install -v github.com/OWASP/Amass/v3/...@master
     printf " ${red} Don't forget to configure the config.ini file in $HOME/.config/amass/config.in"
     printf "${red} If the file doesn't exists then create one from https://github.com/OWASP/Amass/blob/master/examples/config.ini"
+    sleep 5
     printf "Nuclei"
     go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
     printf "Naabu"
@@ -57,10 +59,12 @@ install_apt() {
     go install -v github.com/sensepost/gowitness@latest
     printf "Wappalyzergo"
     go install -v github.com/projectdiscovery/wappalyzergo/cmd/update-fingerprints@latest
-    printf "Shuffle Dns"
+    printf "ShuffleDns"
     go install -v github.com/projectdiscovery/shuffledns/cmd/shuffledns@latest
     printf "Anew"
     go install -v github.com/tomnomnom/anew@latest
+    echo "Hakrawler"
+    go install github.com/hakluke/hakrawler@latest
     printf "GoSpider"
     GO111MODULE=on go install github.com/jaeles-project/gospider@latest
     printf "GetJS"
@@ -75,19 +79,23 @@ install_apt() {
     go install github.com/tomnomnom/qsreplace@latest
     printf "meg"
     go install github.com/tomnomnom/meg@latest
+    echo "FFUF"
+    go install github.com/ffuf/ffuf/v2@latest
     printf "gau"
     go install github.com/lc/gau/v2/cmd/gau@latest
-    
+    tput reset    
     printf "Copying the files to /usr/local/bin"
     cp ~/go/bin/* /usr/local/bin
     printf "@@Updating Nuclei"
     nuclei -ut -v
+    sleep 2
     echo " Getting the GF patterns from 1ndianl33t"
     cd ~
     git clone https://github.com/1ndianl33t/Gf-Patterns
     mkdir ~/.gf
     cd Gf-Patterns
     cp *.json ~/.gf
+    cd ..
     rm -rf Gf-Patterns
     printf "Pre GF patterns from Tomnomnom"
     cd ~/go/pkg/mod/github.com/tomnomnom/gf*/examples
@@ -100,9 +108,10 @@ install_apt() {
     sudo mv findomain /usr/bin/findomain
     printf "FeroxBuster"
     sudo apt install -y feroxbuster
+    tput reset
     printf "Getting xnlinkfinder, subdoaminizer, waymore"
     cd ~
-    mkdir tools
+    mkdir $HOME/tools
     cd tools
     git clone https://github.com/nsonaniya2010/SubDomainizer.git
     cd SubDomainizer
@@ -116,6 +125,8 @@ install_apt() {
     cd waymore
     sudo python setup.py install
     cd ~
+    echo "The tools are stored in $HOME/tools folder"
+    tput reset
     read -p "Want to Install mobile app checking tools also $foo? [y/n]" answer
     if [[ $answer = y ]] ; then
     sudo apt install -y jadx
@@ -139,7 +150,7 @@ install_pacman() {
     #Installing Chromium
     sudo pacman -S chromium
     #Installing GO
-    sudo pacman -S go
+    sudo pacman -S go ffuf dirsearch massdns masscan
     printf "Installing Go Tools"
      printf "${blue} Installing All Go tools"
     #subfinder
