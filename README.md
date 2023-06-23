@@ -15,9 +15,9 @@ chmod +x recon_tools.sh
 ```
 # Tools Included
 ```
-# Browser
+**Browser**
 chromium-browser
-# Subdomain Finder
+**Subdomain Finder**
 subfinder
 Amass
 assetfinder
