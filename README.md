@@ -14,9 +14,10 @@ chmod +x recon_tools.sh
 ./recon_tools.sh
 ```
 # Tools Included
-**Browser**
+# Browser
 chromium-browser
-**Subdomain Finder**
+# Subdomain Finder
+```
 subfinder
 Amass
 assetfinder
@@ -24,24 +25,38 @@ shosubgo
 haktldextract
 Findomain
 subdoaminizer
+```
 # Vulnerability Check
+```
 Nuclei
+```
 # Port scan
+```
 masscan
 Naabu
+```
 # Check alive host
+```
 httpx
+```
 # Dns
+```
 massdns
 ShuffleDns
+```
 # javascript finder
+```
 GetJS
 xnlinkfinder
 subjs
+```
 # xss finder
+```
 Dalfox
 Kxss
+```
 # Crawler
+```
 katana
 Haktrails
 Hakrawler
@@ -49,20 +64,29 @@ GoSpider
 gau
 waymore
 meg
+```
 # Visual Inspection
+```
 gowitness
 Wappalyzergo
+```
 # Tools
+```
 gf
 Anew
 qsreplace
+```
 # Brute forcing
+```
 ffuf
 dirsearch
 feroxbuster
+```
 # Android apks
+```
 jadx
 apkleaks
+```
 
 # Also works on arch based distro
 
